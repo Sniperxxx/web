@@ -1,3 +1,9 @@
+<center>
+<body bgcolor="black">
+<font color="black" size="10"></font>
+<font color="black"></center>
+<center>
+
 <?php
 
 error_reporting(0);
