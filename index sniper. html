@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>H4CKED BY SNIPER404</title>
+
+<iframe width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://i.top4top.io/m_16036g6f61.mp3" allowfullscreen="none" ></iframe> </html>
+
+<br><br><br><br>
+   <div id="foter" class="foter" color=#00FFFF style="position: fixed; top: 75px; left: -235px; width: 600px; padding: 10px; font-size: 16px; text-align: center; color: rgb(255, 255, 255); font-family: &#39;trebuchet ms&#39;, verdana, arial, sans-serif;transform: rotate(-45deg);transform-origin: 50% 0px;-o-transform: rotate(-45deg); -o-transform-origin: 50% 0px;-moz-transform: rotate(-45deg); -moz-transform-origin: 50% 0px; -webkit-transform: rotate(-45deg); -webkit-transform-origin: 50% 0px; background-color: rgb(0, 0, 0); border: 1px solid rgb(170, 170, 170); z-index: 9999; opacity: 0.5;"><b>
+<font face="trade Winds" size="6"><marquee direction="right" scrollamount="25" width="50%">NO SYSTEM IS SAFE</marquee></font></b></div></span>
+
+
+</head>
+<body bgcolor="black" >
+<center><font face="Courier new" size="25" color="lime">[H4CKED BY|SNIPER404]</font>
+
+<a href="http://sniperghostxploiter.eu5.org/" target="_blank">.</a>
+
+</center>
+<br><div class="animasi">
+	<!-- Menampilkan Jam (Aktif) -->
+	<center><font color="lime"><div id="clock"></div>
+	<script type="text/javascript">
+	<!--
+	function showTime() {
+	var a_p = "";
+	var today = new Date();
+	var curr_hour = today.getHours();
+	var curr_minute = today.getMinutes();
+	var curr_second = today.getSeconds();
+	if (curr_hour < 24) {
+	a_p = "AM";
+	} else {
+	a_p = "PM";
+	}
+	if (curr_hour == 24) {
+	curr_hour = 24;
+	}
+	if (curr_hour > 24) {
+	curr_hour = curr_hour - 24;
+	}
+	curr_hour = checkTime(curr_hour);
+	curr_minute = checkTime(curr_minute);
+	curr_second = checkTime(curr_second);
+	document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+	}
+	
+	function checkTime(i) {
+	if (i < 10) {
+	i = "0" + i;
+	}
+	return i;
+	}
+	setInterval(showTime, 500);
+	//-->
+	</script>
+	
+	<br>
+	<script type='text/javascript'>
+	<!--
+	var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+	var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+	var date = new Date();
+	var day = date.getDate();
+	var month = date.getMonth();
+	var thisDay = date.getDay(),
+	thisDay = myDays[thisDay];
+	var yy = date.getYear();
+	var year = (yy < 1000) ? yy + 1900 : yy;
+	document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+	//-->
+	</script>
+
+<br><img src="https://h.top4top.io/p_1839mgakm0.png"width="512"height="512">
+<br>
+    <center><h2>DISCLAIMER</h2></center>
+    <center><p> you have been hacked !!! , not because of your stupidity</p></center>
+    <center><p>That's because we love you, and we want to warn you</p></center>
+    <center><p>That your web still has large of vulnerability</p></center
+    <center><p>Dear admin This was not a joke or dream, this is fucking reality</p></center>
+
+<br>
+<marquee behavior="scroll" direction="left" scrollamount="25" scrolldelay="55" width="100%">
+<font face="Courier New" size="24" font style="text-shadow: 0px 0px 0px lime;" color="lime">
+<b>-=| SNIPER 404 WAS HERE |=-</font>
+</body>
+</html>
+<iklan style="display:none">
